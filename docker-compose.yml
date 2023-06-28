@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  link-db:
+    image: redis:7
+    command: redis-server --appendonly yes
+    ports:
+      - 6379:6379
+    volumes:
+      - ./database/data:/data
